@@ -1,0 +1,89 @@
+@import 'src/view/styles/variable';
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// @include media(768px) { color: red; };
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// @include border-radius(5px);
+
+@mixin font-face($name, $file, $weight: noraml, $style: normal) {
+  @font-face {
+    font-family: '#{$name}';
+    font-weight: $weight;
+    font-style: $style;
+    src: url('../assets/fonts/#{$file}.otf') format('truetype');
+  }
+}
+
+// @include border-box();
+@mixin border-box() {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+// @include font-face('설정할 폰트 이름', '폰트 파일 이름');
+// @include font-face('설정할 폰트 이름', '폰트 파일 이름', bold);
+
+@mixin article-main() {
+  position: relative;
+  width: 1200px;
+  height: fit-content;
+  margin: 10px auto 0;
+  padding: 44px 40px 50px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+@mixin article-main-no-padding() {
+  position: relative;
+  width: 1200px;
+  height: fit-content;
+  margin: 10px auto 0;
+  padding-top: 44px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+@mixin article-initialize() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 900px;
+  min-height: 100vh;
+  padding-top: 60px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
