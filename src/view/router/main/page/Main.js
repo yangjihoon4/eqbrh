@@ -202,7 +202,11 @@ function Main(props) {
                                 Ultimate secure messenger and wallet based on
                                 blockchain technology. Whisper is a key application that makes EQ Hub a Platform. Numorous dAPPs or Projects will be deployed and connected through Whisper.
                             </div>
-                            <div className="link-btn">Learn more</div>
+                            <div className="link-btn">
+                                <a target="_blank" href="https://whispermsg.com/" rel="noreferrer">
+                                    Learn more
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="card-wrapper reverse">
@@ -215,7 +219,11 @@ function Main(props) {
                                 a vast ecosystem based on blockchain networks
                                 deploying Equilibrium technology. While its ultimate goal is to use the high speed and scalability of Equilibrium to promote the commercial use of blockchain technology across several industries, the Volare Network is first aiming to actively attract highly accessible dApps, in particular blockchain-based games.
                             </div>
-                            <div className="link-btn">Learn more</div>
+                            <div className="link-btn">
+                                <a target="_blank" href="https://volare.network/" rel="noreferrer">
+                                    Learn more
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="card-wrapper">

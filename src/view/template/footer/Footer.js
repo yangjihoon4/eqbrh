@@ -1,7 +1,13 @@
 import React from 'react';
 import './style/Footer.scss';
 import logoWhite from "../../../assets/images/logoWhite.png"
+import {Link} from "react-router-dom";
 function Footer(props) {
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div id={"Footer"}>
             <div className="detail-wrapper">
@@ -31,7 +37,11 @@ function Footer(props) {
                 <div className="detail-data-wrapper">
                     <div className="title">SITEMAP</div>
                     <div className="site-link-wrapper">
-                        <div className="site-link">Why EQBR?</div>
+                        <div className="site-link">
+                            <Link to={'/'} className='link-style' onClick={() => scrollToTop()}>
+                                Why EQBR?
+                            </Link>
+                        </div>
                         <div className="site-link">Equilibrium</div>
                         <div className="site-link">EQ HUB</div>
                         <div className="site-link">About</div>
