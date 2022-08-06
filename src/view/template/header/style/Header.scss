@@ -1,9 +1,8 @@
  #Header{
   display: flex;
   align-items: center;
-  height: 108px;
-  border-bottom: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 72px;
+  border-bottom: 1px solid #E3E3E3;
   .logo-content-wrapper{
     display: flex;
     justify-content: space-between;
@@ -12,7 +11,7 @@
     margin : 0 120px;
     .logo-wrapper{
       .logo-img{
-        width: 120px;
+        height: 26px;
         object-fit: contain;
       }
     }

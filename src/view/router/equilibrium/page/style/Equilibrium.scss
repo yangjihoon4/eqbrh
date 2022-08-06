@@ -1,57 +1,82 @@
-#Equilibrium{
+#Equilibrium {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .equilibrium-section1{
+  width: 900px;
+  margin: 0 auto;
+
+  .equilibrium-section1 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 80px;
     margin-bottom: 130px;
     padding: 42px 0;
-    .section1-text-wrapper{
-      margin-right: 92px;
-      .section1-text-title{
-      margin-bottom: 24px;
+
+    .equilibrium-section1-text-wrapper {
+      .equilibrium-section1-text-title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+
+      .equilibrium-section1-text-sub-title {
+        white-space: pre-wrap;
       }
     }
-    .section1-image-wrapper{
-      .section1-image{
+
+    .equilibrium-section1-image-wrapper {
+      .equilibrium-section1-image {
         width: 420px;
         object-fit: contain;
       }
     }
   }
-  .equilibrium-section2{
+
+  .equilibrium-section2 {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 140px;
 
   }
-  .equilibrium-section3{
-    .section3-title{
+
+  .equilibrium-section3 {
+    width: 100%;
+
+    .equilibrium-section3-title {
       display: flex;
       flex-direction: row;
       justify-content: center;
       white-space: pre-wrap;
       margin-bottom: 60px;
     }
-    .strength-of-eq-card-container{
+
+    .equilibrium-section3-card-container {
       display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
-  .equilibrium-section4{
+
+  .equilibrium-section4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 160px;
-    .section4-title{
+
+    .equilibrium-section4-title {
       margin-bottom: 44px;
     }
-    .section4-image{
+
+    .equilibrium-section4-image {
       height: 72px;
       margin-bottom: 44px;
       object-fit: contain;
     }
-    .section4-description{
+
+    .equilibrium-section4-description {
       font-weight: 500;
       font-size: 18px;
       line-height: 26px;
@@ -59,16 +84,15 @@
       color: #B1B1B1;
     }
   }
-  .equilibrium-section5{
+
+  .equilibrium-section5 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 180px;
     padding-bottom: 190px;
-    .section5-title{
 
-    }
-    .section5-sub-title{
+    .equilibrium-section5-sub-title {
       margin-bottom: 64px;
       font-weight: 500;
       font-size: 18px;
@@ -76,12 +100,15 @@
       text-align: center;
       color: #000000;
     }
-    .button-container{
+
+    .button-container {
       width: 255px;
       height: 62px;
     }
   }
 }
+
+
 
 .gradient-text {
   background: linear-gradient(266.17deg, #4AA8FF 46.86%, #6C69FB 99.96%);
@@ -89,11 +116,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-.text-gray{
+.text-gray {
   color: #B1B1B1;
 }
 
-.text-title{
+.text-title {
   font-size: 72px;
   font-weight: 700;
   line-height: 80px;
@@ -117,50 +144,49 @@
   line-height: 48px;
 }
 
-.text-20{
+.text-20 {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
-.text-16{
+.text-16 {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
 }
 
-.gradient-info{
+.gradient-info {
   display: flex;
   flex-direction: column;
-  &:not(:last-child){
-    margin-right: 80px;
-  }
-  .gradient-info-data-wrapper{
+
+  .gradient-info-data-wrapper {
     display: flex;
     align-items: flex-end;
     margin-bottom: 20px;
-    .gradient-info-data{
+
+    .gradient-info-data {
       margin-right: 6px;
     }
   }
 }
 
-.strength-of-eq-card{
+.strength-of-eq-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 428px;
-  &:not(:last-child){
-    margin-right: 44px;
-  }
-  .strength-of-eq-image{
+
+  .strength-of-eq-image {
     width: 135px;
     margin-bottom: 36px;
     object-fit: contain;
   }
-  .strength-of-eq-text-wrapper{
+
+  .strength-of-eq-text-wrapper {
     padding-top: 32px;
-    .strength-of-eq-title{
+
+    .strength-of-eq-title {
       margin-bottom: 16px;
       font-weight: 600;
       font-size: 24px;
@@ -168,14 +194,16 @@
       color: #282828;
 
     }
-    .strength-of-eq-sub-title{
+
+    .strength-of-eq-sub-title {
       margin-bottom: 20px;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       color: #282828;
     }
-    .strength-of-eq-description{
+
+    .strength-of-eq-description {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
@@ -184,14 +212,14 @@
   }
 }
 
-.divide-line{
+.divide-line {
   width: 100%;
   height: 2px;
   background: linear-gradient(266.17deg, #4AA8FF 46.86%, #6C69FB 99.96%);
 }
 
-.button1{
-    width: 100%;
+.button1 {
+  width: 100%;
   height: 100%;
   background-color: #125488;
   border-radius: 8px;

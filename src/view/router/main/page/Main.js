@@ -1,17 +1,18 @@
 import React from 'react';
 import './style/Main.scss';
-import mainImage1 from "../../../../assets/images/mainImage1.png";
-import mainImage2 from "../../../../assets/images/mainImage2.png";
-import mainImage3 from "../../../../assets/images/mainImage3.png";
-import mainImage4 from "../../../../assets/images/mainImage4.png";
-import mainImage5 from "../../../../assets/images/mainImage5.png";
-import mainImage6 from "../../../../assets/images/mainImage6.png";
-import mainImage7 from "../../../../assets/images/mainImage7.png";
-import mainImage8 from "../../../../assets/images/mainImage8.png";
-import mainImage9 from "../../../../assets/images/mainImage9.png";
-import mainImage10 from "../../../../assets/images/mainImage10.png";
+import mainImage1 from "../../../assets/images/main/mainImage1.png";
+import mainImage2 from "../../../assets/images/main/mainImage2.png";
+import mainImage3 from "../../../assets/images/main/mainImage3.png";
+import mainImage4 from "../../../assets/images/main/mainImage4.png";
+import mainImage5 from "../../../assets/images/main/mainImage5.png";
+import mainImage6 from "../../../assets/images/main/mainImage6.png";
+import mainImage7 from "../../../assets/images/main/mainImage7.png";
+import mainImage8 from "../../../assets/images/main/mainImage8.png";
+import mainImage9 from "../../../assets/images/main/mainImage9.png";
+import mainImage10 from "../../../assets/images/main/mainImage10.png";
+import dotBackground from "../../../assets/images/main/dotBackground.png";
 
-import dotBackground from "../../../../assets/images/dotBackground.png";
+import mainVideo from '../../../assets/video/mainVideo.mp4'
 
 function Main(props) {
     return (
@@ -19,7 +20,7 @@ function Main(props) {
             <div className="content-wrapper">
                 <div className="content-box-wrapper">
                     <div className="title">
-                        <div className="row-wrapper line-height-96">
+                        <div className="row-wrapper line-heig ht-96">
                             <div className="black-big">Make</div>
                             <div className="blue-big">Anything</div>
                         </div>
@@ -37,9 +38,12 @@ function Main(props) {
                             Just build it with EQBR
                         </div>
                     </div>
-                    <div className="infographic-wrapper">
-                        Infographic
-                    </div>
+                    <video className='main-video' muted autoPlay loop >
+                        <source src={mainVideo} type="video/mp4"/>
+                    </video>
+                    {/*<div className="infographic-wrapper">*/}
+                    {/*    Infographic*/}
+                    {/*</div>*/}
                 </div>
                 <div className="content-box-wrapper">
 

@@ -8,18 +8,20 @@ function Equilibrium(props) {
     return (
         <div id='Equilibrium'>
             <div className="equilibrium-section1">
-                <div className="section1-text-wrapper">
-                    <div className="section1-text-title">
-                        <div className='gradient-text text-title'>Next Level</div>
-                        <div className='text-title'>Blockchain</div>
+                <div className="equilibrium-section1-text-wrapper">
+                    <div className="equilibrium-section1-text-title">
+                        <span className='gradient-text text-title'>Next Level</span>
+                        <span className='text-title'>Blockchain</span>
                     </div>
-                    <div className="section1-text-sub-title">
-                        <div className='text-description'>Power Shift, From Platform Economy</div>
-                        <div className='text-description'>To P2P Economy</div>
+                    <div className="equilibrium-section1-text-sub-title">
+                        <span className='text-description'>
+                            {'Power Shift, From Platform Economy\n' +
+                                'To P2P Economy'}
+                        </span>
                     </div>
                 </div>
-                <div className="section1-image-wrapper">
-                    <img className='section1-image' src={Equilibrium_Section1_Image} alt=""/>
+                <div className="equilibrium-section1-image-wrapper">
+                    <img className='equilibrium-section1-image' src={Equilibrium_Section1_Image} alt=""/>
                 </div>
             </div>
             <div className="equilibrium-section2">
@@ -30,12 +32,12 @@ function Equilibrium(props) {
                 })}
             </div>
             <div className="equilibrium-section3">
-                <div className="section3-title">
+                <div className="equilibrium-section3-title">
                     <span className='text-40'>
                         Strength of <span className='gradient-text'>EQUILIBRIUM</span>
                     </span>
                 </div>
-                <div className="strength-of-eq-card-container">
+                <div className="equilibrium-section3-card-container">
                     {StrengthOfEQData.map((el, index) => {
                         return (
                             <StrengthOfEQCard data={el} key={index}/>
@@ -44,11 +46,11 @@ function Equilibrium(props) {
                 </div>
             </div>
             <div className="equilibrium-section4">
-                <span className='section4-title text-40'>
+                <span className='equilibrium-section4-title text-40'>
                     <span className='gradient-text'>Continuous</span> Improvement
                 </span>
-                <img className='section4-image' src={Equilibrium_Section4_Image} alt=""/>
-                <div className="section4-description">
+                <img className='equilibrium-section4-image' src={Equilibrium_Section4_Image} alt=""/>
+                <div className="equilibrium-section4-description">
                     <span>Participates in <span
                         style={{color: '#282828'}}>government-led development project</span></span>
                     <div>‘Blockchain Technology for Data-driven Economy’,</div>
@@ -60,7 +62,7 @@ function Equilibrium(props) {
                     <div>Let's Build Your Own</div>
                     <div>Blockchain Network</div>
                 </div>
-                <div className='section5-sub-title'>
+                <div className='equilibrium-section5-sub-title'>
                     <div> By just One-click, You can Create</div>
                     <div> Simple, Faster and Easy.</div>
                 </div>

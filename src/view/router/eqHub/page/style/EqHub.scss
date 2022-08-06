@@ -1,0 +1,254 @@
+#EqHub {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 43px;
+
+  .eqhub-section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+
+    .eqhub-section1-text-wrapper {
+      .eqhub-section1-text-title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+
+      .eqhub-section1-text-sub-title {
+
+      }
+    }
+
+    .eqhub-section1-image {
+      height: 344px;
+      object-fit: contain;
+    }
+  }
+
+  .eqhub-section2 {
+    margin-bottom: 120px;
+
+    .eqhub-section2-card-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .eqhub-section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 140px;
+
+    .eqhub-section3-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 64px;
+
+    }
+  }
+
+  .eqhub-section4 {
+    width: 100%;
+    margin-bottom: 160px;
+    .eqhub-section4-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+    .eqhub-section4-example-container{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .eqhub-section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 190px;
+
+    .eqhub-section5-title {
+      margin-bottom: 24px;
+    }
+
+    .eqhub-section5-sub-title {
+      margin-bottom: 64px;
+    }
+
+    .button-container {
+      width: 255px;
+      height: 62px;
+    }
+  }
+}
+////////////////////////////
+.eqhub-section2-card {
+  display: flex;
+  flex-direction: column;
+
+  .eqhub-section2-card-amount {
+    margin-bottom: 6px;
+  }
+}
+////////////////////////////
+
+.eqhub-section3-tab {
+  display: flex;
+
+  .eqhub-section3-tab-toggle-container {
+    margin-right: 10px;
+
+    .eqhub-section3-tab-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      width: 458px;
+      border-radius: 16px;
+      background-color: #EEEEEE;
+      color: #000000;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      &.selected {
+        align-items: start;
+        background-color: #292929;
+        color: #ffffff;
+      }
+
+      .eqhub-section3-tab-toggle-left-wrapper {
+        display: flex;
+        align-items: center;
+
+        &.selected {
+          align-items: start;
+        }
+
+        .eqhub-section3-tab-toggle-icon {
+          width: 32px;
+          margin-right: 15px;
+          object-fit: contain;
+        }
+
+        .eqhub-section3-tab-toggle-text-wrapper {
+          width: 290px;
+
+          &.selected {
+            margin-top: 3px;
+          }
+
+          .eqhub-section3-tab-toggle-title {
+            &.selected {
+              margin-bottom: 12px;
+            }
+          }
+
+        }
+      }
+
+      .eqhub-section3-tab-toggle-action-icon {
+        width: 24px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .eqhub-section3-tab-source {
+    width: 432px;
+    height: auto;
+    border-radius: 16px;
+    background-color: #292929;
+  }
+}
+////////////////////////////
+.eqhub-section4-card{
+  width: 276px;
+  height: 392px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+////////////////////////////
+
+.gradient-text {
+  background: linear-gradient(266.17deg, #4AA8FF 46.86%, #6C69FB 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gray {
+  color: #B1B1B1;
+}
+
+.text-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+.text-description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.text-64 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 54px;
+}
+
+.text-54 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 64px;
+}
+
+.text-40 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.text-20 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.fs-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.fs-16 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fs-14 {
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+.fw-400 {
+  font-weight: normal;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}

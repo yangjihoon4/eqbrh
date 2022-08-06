@@ -51,12 +51,18 @@
       }
       .sub-title{
         margin-top: 24px;
+        margin-bottom: 78px;
         .row-text{
           font-weight: 500;
           font-size: 18px;
           line-height: 26px;
           text-align: center;
         }
+      }
+      .main-video{
+        width: 784px;
+        height: auto;
+        border-radius: 10px;
       }
       .infographic-wrapper{
         display: flex;
