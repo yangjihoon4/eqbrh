@@ -88,7 +88,6 @@ function Main(props) {
                         <div className="top-img-wrapper">
                             <img className="explain-img" src={mainImage2}/>
                         </div>
-
                         <div className="for-background">
                             <img className="background-img" src={dotBackground}/>
                         </div>
