@@ -20,10 +20,10 @@ const SITE_MAP = {
             label: 'EQ HUB',
             route: '/eq-hub'
         },
-        {
-            label: 'About',
-            route: '/about'
-        }
+        // {
+        //     label: 'About',
+        //     route: '/about'
+        // }
     ]
 }
 
@@ -32,29 +32,24 @@ const SERVICES = {
     routes: [
         {
             label: 'Whisper',
-            link: '/'
+            link: 'https://whispermsg.com/'
         },
         {
             label: 'Volare',
-            link: '/'
+            link: 'https://volare.network/'
         },
         {
             label: 'APND',
-            link: '/'
+            link: ''
         },
         {
             label: 'MyFlex',
-            link: '/'
+            link: ''
         }
     ]
 }
 
 function Footer(props) {
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0);
-    }
-
     const openLink = (link) => {
         window.open(`${link}`)
     }
@@ -92,10 +87,10 @@ function Footer(props) {
                     <div className="copyright">
                         <div className="footer-bottom-content-text">© 2022 EQBR All Rights Reserved.</div>
                     </div>
-                    <div className="privacy-policy">
-                        <div className="footer-bottom-content-text clickable">Privacy Policy</div>
-                    </div>
-                    <div className="footer-bottom-content-text clickable">Manage Cookies</div>
+                    {/*<div className="privacy-policy">*/}
+                    {/*    <div className="footer-bottom-content-text clickable">Privacy Policy</div>*/}
+                    {/*</div>*/}
+                    {/*<div className="footer-bottom-content-text clickable">Manage Cookies</div>*/}
                 </div>
                 <div className="footer-bottom-right-content-wrapper">
                     <img className="footer-icon youtube" src={Footer_Youtube_Icon} onClick={() => openLink('https://www.youtube.com/channel/UCwjHVefVkToqi9FfGTlFakw')} alt=''/>
@@ -124,7 +119,11 @@ const LinkTab = ({data}) => {
                 }
             }
             case 'SERVICES': {
-
+                if(Boolean(el.link)){
+                    return window.open(`${el.link}`)
+                }else{
+                    return null;
+                }
             }
             default:
                 return null;
@@ -138,7 +137,7 @@ const LinkTab = ({data}) => {
             <div className="link-tab-link-container">
                 {data.routes.map((el,index) => {
                     return(
-                        <div className="link" onClick={() => onClickLink(el)}>
+                        <div className="link" onClick={() => onClickLink(el)} style={{cursor: el.link === '' ? 'default' : 'pointer'}}>
                             {el.label}
                         </div>
                     )})}

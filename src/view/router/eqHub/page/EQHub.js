@@ -59,7 +59,7 @@ function EqHub(props) {
                 <div className="eqhub-section5-sub-title">
                     <span className='text-18'>Let’s check your helpful equipments and solutions.</span>
                 </div>
-                <Button className='main-button large-button default'>Get Started</Button>
+                <Button className='main-button large-button default' style={{cursor: 'default'}}>Get Started</Button>
             </div>
         </div>
     );

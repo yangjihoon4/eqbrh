@@ -12,10 +12,6 @@ const HeaderTab = [
     {
         label: 'EQ Hub',
         route: '/eq-hub'
-    },
-    {
-        label: 'About',
-        route: '/about'
     }
 ]
 
@@ -52,7 +48,7 @@ function Header(props) {
                             <div className={`link-btn ${location.pathname === el.route ? 'selected' : ''}`} key={index} onClick={() => navigateToRoute(el)}>{el.label}</div>
                         )
                     })}
-                    <div className="link-blue-btn">Get started</div>
+                    <div className="link-blue-btn" style={{cursor: 'default'}}>Get started</div>
                 </div>
             </div>
         </header>

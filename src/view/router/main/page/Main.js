@@ -264,7 +264,7 @@ function Main(props) {
         <div className="content-box-wrapper margin-top-180">
           <div className="title">Why Hesitate ?</div>
           <div className="sub-title">Using EQBR's Products and spare your time</div>
-          <div className="btn-wrapper">Get Started</div>
+          <div className="btn-wrapper" style={{cursor: 'default'}}>Get Started</div>
         </div>
       </div>
     </div>
@@ -284,7 +284,7 @@ const PlatformCard = (props) => {
         <div className="platform-card-content-title">{label}</div>
         <div className="platform-card-content-description">{description}</div>
         <Link to={link} className="platform-card-content-link">
-          Learn More
+          {/*Learn More*/}
         </Link>
       </div>
     </div>
