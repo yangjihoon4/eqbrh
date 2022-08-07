@@ -17,15 +17,15 @@ import Section4_Image3 from '../../../../assets/images/eqHub/EqHub_Section4_Imag
 
 export const EqHubSection2CardData = [
     {
-        amount: 30,
+        amount: 5,
         description: 'Networks created'
     },
     {
-        amount: 50,
+        amount: 8,
         description: 'dAPPs distributed'
     },
     {
-        amount: 1240000,
+        amount: 11,
         description: 'Tokens issued'
     }
 ]
