@@ -22,7 +22,7 @@ export const EqHubSection2CardData = [
     },
     {
         amount: 8,
-        description: 'dAPPs distributed'
+        description: 'DAPPs distributed'
     },
     {
         amount: 11,
