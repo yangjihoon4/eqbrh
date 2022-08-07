@@ -101,7 +101,10 @@ function Main(props) {
                   and <span className="highlight">Scalability</span>
                 </p>
               </div>
-              <button className="equilibrium-button" onClick={() => navigate("/equilibrium")}>
+              <button className="equilibrium-button" onClick={() => {
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                navigate("/equilibrium");
+              }}>
                 Learn more
               </button>
             </div>
@@ -119,7 +122,10 @@ function Main(props) {
               <div className="blue-medium">EQ Hub</div>
             </div>
           </div>
-          <button className="learn-more-btn">Learn more</button>
+          <button className="learn-more-btn" onClick={() => {
+            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+            navigate("/eq-hub");
+          }}>Learn more</button>
           <div className="explain-wrapper">
             <div className="top-img-wrapper">
               <img className="explain-img" src={mainImage2} />
