@@ -56,13 +56,15 @@
   .eqhub-section4 {
     width: 100%;
     margin-bottom: 160px;
+
     .eqhub-section4-title {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 64px;
     }
-    .eqhub-section4-example-container{
+
+    .eqhub-section4-example-container {
       display: flex;
       justify-content: space-between;
     }
@@ -88,6 +90,7 @@
     }
   }
 }
+
 ////////////////////////////
 .eqhub-section2-card {
   display: flex;
@@ -97,6 +100,7 @@
     margin-bottom: 6px;
   }
 }
+
 ////////////////////////////
 
 .eqhub-section3-tab {
@@ -169,14 +173,15 @@
     background-color: #292929;
   }
 }
+
 ////////////////////////////
-.eqhub-section4-card{
-  width: 276px;
-  height: 392px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+.eqhub-section4-card {
+  .eqhub-section4-card-image {
+    width: 276px;
+    object-fit: contain;
+  }
 }
+
 ////////////////////////////
 
 .gradient-text {

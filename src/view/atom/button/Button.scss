@@ -7,4 +7,18 @@
     outline: none;
   }
 }
+.large-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 276px;
+  height: 62px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  &.default{
+    background-color: #125488;
+    color: #ffffff;
+  }
+}
 

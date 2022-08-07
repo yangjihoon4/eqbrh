@@ -9,6 +9,10 @@ import Token_black_Icon from '../../../../assets/images/eqHub/EQHub_Section3_Tok
 import Sale_white_Icon from '../../../../assets/images/eqHub/EQHub_Section3_Sale_white_Icon.png'
 import Sale_black_Icon from '../../../../assets/images/eqHub/EQHub_Section3_Sale_black_Icon.png'
 
+import Section4_Image1 from '../../../../assets/images/eqHub/EqHub_Section4_Image1.png'
+import Section4_Image2 from '../../../../assets/images/eqHub/EqHub_Section4_Image2.png'
+import Section4_Image3 from '../../../../assets/images/eqHub/EqHub_Section4_Image3.png'
+
 export const EqHubSection2CardData = [
     {
         amount: 30,
@@ -59,5 +63,17 @@ export const EqHubSection3TabData = [
         iconBlack: Sale_black_Icon,
         title: 'SALES',
         description: 'Register a sale event for the token on Launchpad.'
+    }
+]
+
+export const EqHubSection4CardData = [
+    {
+        image:Section4_Image1
+    },
+    {
+        image:Section4_Image2
+    },
+    {
+        image:Section4_Image3
     }
 ]

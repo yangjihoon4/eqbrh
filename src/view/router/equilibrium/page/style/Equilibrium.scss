@@ -15,22 +15,28 @@
     padding: 42px 0;
 
     .equilibrium-section1-text-wrapper {
-      .equilibrium-section1-text-title {
+      .equilibrium-section1-text-title-wrapper {
         display: flex;
         flex-direction: column;
         margin-bottom: 24px;
+        .equilibrium-section1-text-title{
+          font-size: 72px;
+          font-weight: 700;
+          line-height: 80px;
+        }
       }
-
-      .equilibrium-section1-text-sub-title {
+      .equilibrium-section1-text-sub-title-wrapper {
         white-space: pre-wrap;
+        .equilibrium-section1-text-sub-title{
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     }
-
-    .equilibrium-section1-image-wrapper {
-      .equilibrium-section1-image {
-        width: 420px;
-        object-fit: contain;
-      }
+    .equilibrium-section1-image {
+      width: 420px;
+      object-fit: contain;
     }
   }
 
@@ -44,13 +50,12 @@
 
   .equilibrium-section3 {
     width: 100%;
-
-    .equilibrium-section3-title {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      white-space: pre-wrap;
+    .equilibrium-section3-title{
       margin-bottom: 60px;
+      font-weight: 700;
+      font-size: 40px;
+      text-align: center;
+      line-height: 48px;
     }
 
     .equilibrium-section3-card-container {
@@ -91,14 +96,26 @@
     align-items: center;
     padding-top: 180px;
     padding-bottom: 190px;
+    .equilibrium-section5-title-wrapper{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      .equilibrium-section5-title{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
 
-    .equilibrium-section5-sub-title {
+    .equilibrium-section5-sub-title-wrapper {
       margin-bottom: 64px;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 26px;
-      text-align: center;
-      color: #000000;
+      .equilibrium-section5-sub-title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #000000;
+      }
     }
 
     .button-container {
@@ -116,46 +133,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.text-gray {
-  color: #B1B1B1;
-}
-
-.text-title {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 80px;
-}
-
-.text-description {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.text-64 {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 54px;
-}
-
-.text-40 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-}
-
-.text-20 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.text-16 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-}
-
 .gradient-info {
   display: flex;
   flex-direction: column;
@@ -165,9 +142,24 @@
     align-items: flex-end;
     margin-bottom: 20px;
 
-    .gradient-info-data {
+    .gradient-info-data{
       margin-right: 6px;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 54px;
     }
+    .gradient-info-unit{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+  }
+  .gradient-info-description{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #B1B1B1;
   }
 }
 
@@ -178,7 +170,7 @@
   width: 428px;
 
   .strength-of-eq-image {
-    width: 135px;
+    width: 192px;
     margin-bottom: 36px;
     object-fit: contain;
   }
@@ -216,15 +208,4 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(266.17deg, #4AA8FF 46.86%, #6C69FB 99.96%);
-}
-
-.button1 {
-  width: 100%;
-  height: 100%;
-  background-color: #125488;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #ffffff;
 }

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './style/EqHub.scss'
 import EQHub_section1_Image from '../../../assets/images/eqHub/EQHub_Section1_Image.png'
-import {EqHubSection2CardData, EqHubSection3TabData} from "./style/EqHubData";
+import {EqHubSection2CardData, EqHubSection3TabData, EqHubSection4CardData} from "./style/EqHubData";
 import EQHub_Section3_Add from '../../../assets/images/eqHub/EQHub_Section3_Add_Icon.png'
 import EQHub_Section3_Hide from '../../../assets/images/eqHub/EQHub_Section3_Hide_Icon.png'
+import Button from "../../../atom/button/Button";
 
 function EqHub(props) {
     const [selectedToolInfo, setSelectedToolInfo] = useState('network')
@@ -44,9 +45,9 @@ function EqHub(props) {
                     <span className='text-40'>Various<span className='gradient-text'> Examples</span></span>
                 </div>
                 <div className="eqhub-section4-example-container">
-                    {['a', 'b', 'c'].map(((el, index) => {
+                    {EqHubSection4CardData.map(((el, index) => {
                         return (
-                            <EQHubSection4Card key={index}/>
+                            <EQHubSection4Card data={el} key={index}/>
                         )
                     }))}
                 </div>
@@ -58,9 +59,7 @@ function EqHub(props) {
                 <div className="eqhub-section5-sub-title">
                     <span className='text-18'>Let’s check your helpful equipments and solutions.</span>
                 </div>
-                <div className="button-container">
-                    <button className='main-button button1'>Go to EQ Hub</button>
-                </div>
+                <Button className='main-button large-button default'>Go to EQ Hub</Button>
             </div>
         </div>
     );
@@ -113,9 +112,10 @@ const EQHubSection3Tab = ({selectedTool, setSelectedTool}) => {
     )
 }
 
-const EQHubSection4Card = () => {
+const EQHubSection4Card = ({data}) => {
     return (
         <div className='eqhub-section4-card'>
+            <img className='eqhub-section4-card-image' src={data.image} alt=""/>
         </div>
     )
 }

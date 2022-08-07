@@ -3,26 +3,25 @@ import './style/Equilibrium.scss'
 import Equilibrium_Section1_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn1_Image.png'
 import Equilibrium_Section4_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn4_Image.png'
 import {EquilibriumData, StrengthOfEQData} from "./EquilibriumData";
+import Button from "../../../atom/button/Button";
 
 function Equilibrium(props) {
     return (
         <div id='Equilibrium'>
             <div className="equilibrium-section1">
                 <div className="equilibrium-section1-text-wrapper">
-                    <div className="equilibrium-section1-text-title">
-                        <span className='gradient-text text-title'>Next Level</span>
-                        <span className='text-title'>Blockchain</span>
+                    <div className="equilibrium-section1-text-title-wrapper">
+                        <div className='equilibrium-section1-text-title'>Next Level</div>
+                        <div className='equilibrium-section1-text-title gradient-text'>Blockchain</div>
                     </div>
-                    <div className="equilibrium-section1-text-sub-title">
-                        <span className='text-description'>
+                    <div className="equilibrium-section1-text-sub-title-wrapper">
+                        <div className='equilibrium-section1-text-sub-title'>
                             {'Power Shift, From Platform Economy\n' +
                                 'To P2P Economy'}
-                        </span>
+                        </div>
                     </div>
                 </div>
-                <div className="equilibrium-section1-image-wrapper">
-                    <img className='equilibrium-section1-image' src={Equilibrium_Section1_Image} alt=""/>
-                </div>
+                <img className='equilibrium-section1-image' src={Equilibrium_Section1_Image} alt=""/>
             </div>
             <div className="equilibrium-section2">
                 {EquilibriumData.map((el, index) => {
@@ -32,10 +31,8 @@ function Equilibrium(props) {
                 })}
             </div>
             <div className="equilibrium-section3">
-                <div className="equilibrium-section3-title">
-                    <span className='text-40'>
-                        Strength of <span className='gradient-text'>EQUILIBRIUM</span>
-                    </span>
+                <div className='equilibrium-section3-title'>
+                    Strength of <span className='gradient-text'>EQUILIBRIUM</span>
                 </div>
                 <div className="equilibrium-section3-card-container">
                     {StrengthOfEQData.map((el, index) => {
@@ -58,17 +55,15 @@ function Equilibrium(props) {
                 </div>
             </div>
             <div className="equilibrium-section5">
-                <div className='text-40' style={{marginBottom: 24}}>
-                    <div>Let's Build Your Own</div>
-                    <div>Blockchain Network</div>
+                <div className='equilibrium-section5-title-wrapper'>
+                    <div className='equilibrium-section5-title'>Let's Build Your Own</div>
+                    <div className='equilibrium-section5-title'>Blockchain Network</div>
                 </div>
-                <div className='equilibrium-section5-sub-title'>
-                    <div> By just One-click, You can Create</div>
-                    <div> Simple, Faster and Easy.</div>
+                <div className='equilibrium-section5-sub-title-wrapper'>
+                    <div className='equilibrium-section5-sub-title'> By just One-click, You can Create</div>
+                    <div className='equilibrium-section5-sub-title'> Simple, Faster and Easy.</div>
                 </div>
-                <div className="button-container">
-                    <button className='main-button button1'>Go to EQ Hub</button>
-                </div>
+                <Button className='main-button large-button default'>Go to EQ Hub</Button>
             </div>
         </div>
     );
@@ -80,17 +75,12 @@ const GradientInformation = ({data}) => {
     return (
         <div className='gradient-info'>
             <div className="gradient-info-data-wrapper">
-                <div className="gradient-info-data">
-                    <div className='gradient-text text-64'>{data.data}</div>
-                </div>
-                <div className="gradient-info-unit">
-                    <div className='text-20'>{data.unit}</div>
-                </div>
+                <div className='gradient-text gradient-info-data'>{data.data}</div>
+                <div className='gradient-info-unit'>{data.unit}</div>
             </div>
             <div className="gradient-info-description">
-                <div className='text-16 text-gray'>{data.description}</div>
+                {data.description}
             </div>
-
         </div>
     )
 }
