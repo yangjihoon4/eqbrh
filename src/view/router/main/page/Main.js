@@ -20,7 +20,7 @@ function Main(props) {
             <div className="content-wrapper">
                 <div className="content-box-wrapper">
                     <div className="title">
-                        <div className="row-wrapper line-heig ht-96">
+                        <div className="row-wrapper line-height-96">
                             <div className="black-big">Make</div>
                             <div className="blue-big">Anything</div>
                         </div>
