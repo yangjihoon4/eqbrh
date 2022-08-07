@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './style/EqHub.scss'
 import EQHub_section1_Image from '../../../assets/images/eqHub/EQHub_Section1_Image.png'
 import {EqHubSection2CardData, EqHubSection3TabData, EqHubSection4CardData} from "./style/EqHubData";
@@ -59,7 +59,7 @@ function EqHub(props) {
                 <div className="eqhub-section5-sub-title">
                     <span className='text-18'>Let’s check your helpful equipments and solutions.</span>
                 </div>
-                <Button className='main-button large-button default'>Go to EQ Hub</Button>
+                <Button className='main-button large-button default'>Get Started</Button>
             </div>
         </div>
     );
@@ -82,12 +82,17 @@ const EqHubSection2Card = ({data}) => {
 }
 
 const EQHubSection3Tab = ({selectedTool, setSelectedTool}) => {
+    const [selectedToolSource, setSelectedToolSource] = useState(null);
+
+    useEffect(() => {
+        setSelectedToolSource(EqHubSection3TabData.find(data => selectedTool === data.tool)?.source)
+    },[selectedTool])
     return (
         <div className='eqhub-section3-tab'>
             <div className="eqhub-section3-tab-toggle-container">
                 {EqHubSection3TabData.map((el, index) => {
                     return (
-                        <div className={`eqhub-section3-tab-toggle ${selectedTool === el.tool ? 'selected' : ''}`} onClick={() => setSelectedTool(el.tool)}>
+                        <div className={`eqhub-section3-tab-toggle ${selectedTool === el.tool ? 'selected' : ''}`} onClick={() => setSelectedTool(el.tool)} key={index}>
                             <div className={`eqhub-section3-tab-toggle-left-wrapper ${selectedTool === el.tool ? 'selected' : ''}`}>
                                 <img className='eqhub-section3-tab-toggle-icon' src={selectedTool === el.tool ? el.iconWhite : el.iconBlack} alt=""/>
                                 <div className={`eqhub-section3-tab-toggle-text-wrapper ${selectedTool === el.tool ? 'selected' : ''}`}>
@@ -103,19 +108,25 @@ const EQHubSection3Tab = ({selectedTool, setSelectedTool}) => {
                             </div>
                             <img className='eqhub-section3-tab-toggle-action-icon' src={selectedTool === el.tool ? EQHub_Section3_Hide : EQHub_Section3_Add} alt=""/>
                         </div>
-                    )
+                    ) 
                 })}
             </div>
-            <div className="eqhub-section3-tab-source">
+            <div className="eqhub-section3-tab-source-container">
+                <img className='eqhub-section3-tab-source' src={selectedToolSource} alt=""/>
             </div>
         </div>
     )
 }
 
 const EQHubSection4Card = ({data}) => {
+    const openLink = (link) => {
+        if(Boolean(link)){
+            window.open(`${link}`)
+        }
+    }
     return (
         <div className='eqhub-section4-card'>
-            <img className='eqhub-section4-card-image' src={data.image} alt=""/>
+            <img className='eqhub-section4-card-image' src={data.image} alt="" onClick={() => openLink(data.link)} style={{cursor: Boolean(data.link) ? 'pointer' : 'default'}}/>
         </div>
     )
 }

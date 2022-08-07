@@ -75,7 +75,7 @@ function Main(props) {
           {/*</div>*/}
         </div>
         <div className="content-box-wrapper"></div>
-        <div className="content-box-wrapper margin-top-170">
+        <div className="content-box-wrapper margin-top-160">
           <div className="title">
             <div className="row-wrapper line-height-60">
               <div className="black-medium">Next Level Blockchain Engine</div>

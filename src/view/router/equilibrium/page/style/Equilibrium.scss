@@ -75,10 +75,16 @@
       margin-bottom: 44px;
     }
 
-    .equilibrium-section4-image {
+    .equilibrium-section4-image-container {
+      display: flex;
+      justify-content: space-between;
+      width: 900px;
       height: 72px;
       margin-bottom: 44px;
-      object-fit: contain;
+      .equilibrium-section4-image{
+        height: 100%;
+        object-fit: contain;
+      }
     }
 
     .equilibrium-section4-description {

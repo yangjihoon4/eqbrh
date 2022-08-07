@@ -8,7 +8,9 @@ function Layout(props) {
         display: 'flex',
         flexDirection: 'column',
         minWidth: 1024,
-        margin: '0 auto'
+        width: '100%',
+        margin: '0 auto',
+        paddingTop: 72
     }
     return (
         <>

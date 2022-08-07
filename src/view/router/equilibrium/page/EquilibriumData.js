@@ -1,5 +1,11 @@
 import Section3_Image1 from '../../../assets/images/equilibrium/Equilibrium_Section3_Image1.png'
 import Section3_Image2 from '../../../assets/images/equilibrium/Equilibrium_Section3_Image2.png'
+
+import Section4_Image1 from '../../../assets/images/equilibrium/Equilibrium_Section4_Image1.png'
+import Section4_Image2 from '../../../assets/images/equilibrium/Equilibrium_Section4_Image2.png'
+import Section4_Image3 from '../../../assets/images/equilibrium/Equilibrium_Section4_Image3.png'
+import Section4_Image4 from '../../../assets/images/equilibrium/Equilibrium_Section4_Image4.png'
+import Section4_Image5 from '../../../assets/images/equilibrium/Equilibrium_Section4_Image5.png'
 export const EquilibriumData = [
     {
         data: '4,500',
@@ -36,5 +42,28 @@ export const StrengthOfEQData = [
             'Architectural structure in which Micro Services are built\n' +
             'like independent Lego blocks that are assembled together\n' +
             'to form a network. An opposite to Monolithic Architecture.'
+    }
+]
+
+export const EquilibriumSection4Data = [
+    {
+        image: Section4_Image1,
+        link: 'https://www.msit.go.kr/eng/index.do'
+    },
+    {
+        image: Section4_Image2,
+        link: 'https://www.etri.re.kr/eng/main/main.etri'
+    },
+    {
+        image: Section4_Image3,
+        link: ''
+    },
+    {
+        image: Section4_Image4,
+        link: 'https://www.kaist.ac.kr/en/'
+    },
+    {
+        image: Section4_Image5,
+        link: 'https://www.gist.ac.kr/en/main.html'
     }
 ]

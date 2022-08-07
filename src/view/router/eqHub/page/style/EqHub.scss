@@ -118,6 +118,7 @@
       border-radius: 16px;
       background-color: #EEEEEE;
       color: #000000;
+      cursor: pointer;
 
       &:not(:last-child) {
         margin-bottom: 8px;
@@ -155,7 +156,6 @@
               margin-bottom: 12px;
             }
           }
-
         }
       }
 
@@ -166,11 +166,18 @@
     }
   }
 
-  .eqhub-section3-tab-source {
+  .eqhub-section3-tab-source-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 432px;
     height: auto;
     border-radius: 16px;
     background-color: #292929;
+    .eqhub-section3-tab-source{
+      width: 347px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -178,6 +185,8 @@
 .eqhub-section4-card {
   .eqhub-section4-card-image {
     width: 276px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     object-fit: contain;
   }
 }

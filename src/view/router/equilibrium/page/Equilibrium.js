@@ -2,10 +2,21 @@ import React from 'react';
 import './style/Equilibrium.scss'
 import Equilibrium_Section1_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn1_Image.png'
 import Equilibrium_Section4_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn4_Image.png'
-import {EquilibriumData, StrengthOfEQData} from "./EquilibriumData";
+import {EquilibriumData, EquilibriumSection4Data, StrengthOfEQData} from "./EquilibriumData";
 import Button from "../../../atom/button/Button";
+import {useNavigate} from "react-router-dom";
 
 function Equilibrium(props) {
+    const navigate = useNavigate();
+    const navigateToEqHub = (el) => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        navigate('/eq-hub')
+    }
+    const openLink = (link) => {
+        if(Boolean(link)){
+            window.open(`${link}`)
+        }
+    }
     return (
         <div id='Equilibrium'>
             <div className="equilibrium-section1">
@@ -46,7 +57,14 @@ function Equilibrium(props) {
                 <span className='equilibrium-section4-title text-40'>
                     <span className='gradient-text'>Continuous</span> Improvement
                 </span>
-                <img className='equilibrium-section4-image' src={Equilibrium_Section4_Image} alt=""/>
+                <div className="equilibrium-section4-image-container">
+                    {EquilibriumSection4Data.map((el, index) => {
+                        return (
+                            <img className='equilibrium-section4-image' src={el.image} onClick={() => openLink(el.link)} style={{cursor: Boolean(el.link) ? 'pointer' : 'default'}}/>
+                        )
+                    })}
+                </div>
+
                 <div className="equilibrium-section4-description">
                     <span>Participates in <span
                         style={{color: '#282828'}}>government-led development project</span></span>
@@ -63,7 +81,7 @@ function Equilibrium(props) {
                     <div className='equilibrium-section5-sub-title'> By just One-click, You can Create</div>
                     <div className='equilibrium-section5-sub-title'> Simple, Faster and Easy.</div>
                 </div>
-                <Button className='main-button large-button default'>Go to EQ Hub</Button>
+                <Button className='main-button large-button default' onClick={() => navigateToEqHub()}>Go to EQ Hub</Button>
             </div>
         </div>
     );
