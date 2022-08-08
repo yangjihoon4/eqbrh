@@ -60,7 +60,7 @@ function Main(props) {
               <div className="blue-big">Anything</div>
             </div>
             <div className="row-wrapper line-height-96">
-              <div className="black-big">What You Want</div>
+              <div className="black-big">What You Want.</div>
             </div>
           </div>
           <div className="sub-title">
