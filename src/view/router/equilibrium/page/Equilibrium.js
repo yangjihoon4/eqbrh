@@ -1,125 +1,134 @@
-import React from 'react';
-import './style/Equilibrium.scss'
-import Equilibrium_Section1_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn1_Image.png'
-import Equilibrium_Section4_Image from '../../../assets/images/equilibrium/Equilibrium_Sectiojn4_Image.png'
-import {EquilibriumData, EquilibriumSection4Data, StrengthOfEQData} from "./EquilibriumData";
-import Button from "../../../atom/button/Button";
-import {useNavigate} from "react-router-dom";
+import React from "react";
+import "./style/Equilibrium.scss";
+import Equilibrium_Section1_Image from "../../../assets/images/equilibrium/Equilibrium_Sectiojn1_Image.png";
+import Equilibrium_Section4_Image from "../../../assets/images/equilibrium/Equilibrium_Sectiojn4_Image.png";
+import { EquilibriumData, EquilibriumSection4Data } from "./EquilibriumData";
+import { useNavigate } from "react-router-dom";
+import EquilibriumSection3Image1 from "../../../assets/images/equilibrium/Equilibrium_Section3_Image1.png";
+import EquilibriumSection3Image2 from "../../../assets/images/equilibrium/Equilibrium_Section3_Image2.png";
 
 function Equilibrium(props) {
-    const navigate = useNavigate();
-    const navigateToEqHub = (el) => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-        navigate('/eq-hub')
+  const navigate = useNavigate();
+  const navigateToEqHub = (el) => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    navigate("/eq-hub");
+  };
+  const openLink = (link) => {
+    if (Boolean(link)) {
+      window.open(`${link}`);
     }
-    const openLink = (link) => {
-        if(Boolean(link)){
-            window.open(`${link}`)
-        }
-    }
-    return (
-        <div id='Equilibrium'>
-            <div className="equilibrium-section1">
-                <div className="equilibrium-section1-text-wrapper">
-                    <div className="equilibrium-section1-text-title-wrapper">
-                        <div className='equilibrium-section1-text-title'>Next Level</div>
-                        <div className='equilibrium-section1-text-title gradient-text'>Blockchain</div>
-                    </div>
-                    <div className="equilibrium-section1-text-sub-title-wrapper">
-                        <div className='equilibrium-section1-text-sub-title'>
-                            {'Power Shift, From Platform Economy\n' +
-                                'To P2P Economy'}
-                        </div>
-                    </div>
-                </div>
-                <img className='equilibrium-section1-image' src={Equilibrium_Section1_Image} alt=""/>
-            </div>
-            <div className="equilibrium-section2">
-                {EquilibriumData.map((el, index) => {
-                    return (
-                        <GradientInformation data={el} key={index}/>
-                    )
-                })}
-            </div>
-            <div className="equilibrium-section3">
-                <div className='equilibrium-section3-title'>
-                    Strength of <span className='gradient-text'>EQUILIBRIUM</span>
-                </div>
-                <div className="equilibrium-section3-card-container">
-                    {StrengthOfEQData.map((el, index) => {
-                        return (
-                            <StrengthOfEQCard data={el} key={index}/>
-                        )
-                    })}
-                </div>
-            </div>
-            <div className="equilibrium-section4">
-                <span className='equilibrium-section4-title text-40'>
-                    <span className='gradient-text'>Continuous</span> Improvement
-                </span>
-                <div className="equilibrium-section4-image-container">
-                    {EquilibriumSection4Data.map((el, index) => {
-                        return (
-                            <img className='equilibrium-section4-image' src={el.image} onClick={() => openLink(el.link)} style={{cursor: Boolean(el.link) ? 'pointer' : 'default'}}/>
-                        )
-                    })}
-                </div>
-
-                <div className="equilibrium-section4-description">
-                    <span>Participates in <span
-                        style={{color: '#282828'}}>government-led development project</span></span>
-                    <div>‘Blockchain Technology for Data-driven Economy’,</div>
-                    <span>which aims to <span style={{color: '#282828'}}>advance consensus algorithm.</span></span>
-                </div>
-            </div>
-            <div className="equilibrium-section5">
-                <div className='equilibrium-section5-title-wrapper'>
-                    <div className='equilibrium-section5-title'>Let's Build Your Own</div>
-                    <div className='equilibrium-section5-title'>Blockchain Network</div>
-                </div>
-                <div className='equilibrium-section5-sub-title-wrapper'>
-                    <div className='equilibrium-section5-sub-title'> By just One-click, You can Create</div>
-                    <div className='equilibrium-section5-sub-title'> Simple, Faster and Easy.</div>
-                </div>
-                <Button className='main-button large-button default' onClick={() => navigateToEqHub()}>Go to EQ Hub</Button>
-            </div>
+  };
+  return (
+    <div id="Equilibrium">
+      <div className="equilibrium-section1">
+        <div className="equilibrium-section1-text-wrapper">
+          <div className="equilibrium-section1-text-title-wrapper">
+            <div className="equilibrium-section1-text-title">THE NEXT</div>
+            <div className="equilibrium-section1-text-title gradient-text">BIG THING</div>
+            <div className="equilibrium-section1-text-title">IN BLOCKCHAIN</div>
+          </div>
+          <div className="equilibrium-section1-text-sub-title-wrapper">
+            <div className="equilibrium-section1-text-sub-title">{"The commercially viable blockchain technology"}</div>
+          </div>
         </div>
-    );
+        <img className="equilibrium-section1-image" src={Equilibrium_Section1_Image} alt="" />
+      </div>
+      <div className="equilibrium-section2">
+        {EquilibriumData.map((el, index) => {
+          return <GradientInformation data={el} key={index} />;
+        })}
+      </div>
+      <div className="equilibrium-section3">
+        <div className="equilibrium-section3-title">
+          How We <span className="gradient-text">Differentiate</span> from Others
+        </div>
+        <div className="equilibrium-section3-card-container">
+          <DifferentiateList />
+        </div>
+      </div>
+      <div className="equilibrium-section4">
+        <span className="equilibrium-section4-title text-40">
+          Our Academic <span className="gradient-text">Endeavours</span>
+        </span>
+        <div className="equilibrium-section4-image-container">
+          {EquilibriumSection4Data.map((el, index) => {
+            return (
+              <img
+                key={`academic-endeavours-${index}`}
+                className="equilibrium-section4-image"
+                src={el.image}
+                onClick={() => openLink(el.link)}
+                style={{ cursor: Boolean(el.link) ? "pointer" : "default" }}
+                alt={`academic-endeavours`}
+              />
+            );
+          })}
+        </div>
+
+        <div className="equilibrium-section4-description">
+          {`We are proudly engaged in government funded\nresearch project in partnership with\nprestigious scientific organizations in South Korea.\nThe project, Blockchain Technology for Data-driven Economy,\naims to effectively  compose an equalizer in large cluster of nodes.`}
+        </div>
+      </div>
+      {/* <div className="equilibrium-section5">
+        <div className="equilibrium-section5-title-wrapper">
+          <div className="equilibrium-section5-title">Let's Build Your Own</div>
+          <div className="equilibrium-section5-title">Blockchain Network</div>
+        </div>
+        <div className="equilibrium-section5-sub-title-wrapper">
+          <div className="equilibrium-section5-sub-title"> By just One-click, You can Create</div>
+          <div className="equilibrium-section5-sub-title"> Simple, Faster and Easy.</div>
+        </div>
+        <Button className="main-button large-button default" onClick={() => navigateToEqHub()}>
+          Go to EQ Hub
+        </Button>
+      </div> */}
+    </div>
+  );
 }
 
 export default Equilibrium;
 
-const GradientInformation = ({data}) => {
-    return (
-        <div className='gradient-info'>
-            <div className="gradient-info-data-wrapper">
-                <div className='gradient-text gradient-info-data'>{data.data}</div>
-                <div className='gradient-info-unit'>{data.unit}</div>
-            </div>
-            <div className="gradient-info-description">
-                {data.description}
-            </div>
-        </div>
-    )
-}
+const GradientInformation = ({ data }) => {
+  return (
+    <div className="gradient-info">
+      <div className="gradient-info-data-wrapper">
+        <div className="gradient-text gradient-info-data">{data.data}</div>
+        <div className="gradient-info-unit">{data.unit}</div>
+      </div>
+      <div className="gradient-info-description">{data.description}</div>
+    </div>
+  );
+};
 
-const StrengthOfEQCard = ({data}) => {
-    return (
-        <div className='strength-of-eq-card'>
-            <img className="strength-of-eq-image" src={data.image}/>
-            <div className="divide-line"/>
-            <div className="strength-of-eq-text-wrapper">
-                <div className="strength-of-eq-title">
-                    {data.title}
-                </div>
-                <div className="strength-of-eq-sub-title">
-                    {data.subTitle}
-
-                </div>
-                <div className="strength-of-eq-description">
-                    {data.description}
-                </div>
-            </div>
+const DifferentiateList = () => {
+  return (
+    <div className="differentiate-list">
+      <div className="differentiate-list-item">
+        <div className="differentiate-list-item-img">
+          <img src={EquilibriumSection3Image1} alt="equilibrium" className="differentiate-list-item-img-src" />
         </div>
-    )
-}
+        <div className="differentiate-list-item-text">
+          <p className="differentiate-list-item-text-title">
+            Consensus Algorithm <span className="highlight">Equalize</span>
+          </p>
+          <span className="differentiate-list-item-text-description">
+            {`Equilibrium engine employs Equalize, a proprietary non-\ncompetitive consensus method developed based on\nPBFT, to resolve speed problems of PoW, a competitive\nconsensus of previous generation blockchains.`}
+          </span>
+        </div>
+      </div>
+      <div className="differentiate-list-item reverse">
+        <div className="differentiate-list-item-img">
+          <img src={EquilibriumSection3Image2} alt="equilibrium" className="differentiate-list-item-img-src" />
+        </div>
+        <div className="differentiate-list-item-text">
+          <p className="differentiate-list-item-text-title">
+            <span className="highlight">Micro Chain</span> Architecture
+          </p>
+          <span className="differentiate-list-item-text-description">
+            {`Equilibrium engine employs MSA to design each service\ndomain as a ‘Micro Chain’, isolating failures and verloads\nbetween Micro Chains, and ultimately improving\nscalability of the entire network.`}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};

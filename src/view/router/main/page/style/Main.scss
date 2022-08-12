@@ -15,17 +15,16 @@
         .row-wrapper {
           display: flex;
           justify-content: center;
-          line-height: 40px;
+          line-height: 60px;
+          font-size: 56px;
+          font-weight: 700;
           text-align: center;
+          letter-spacing: -0.02em;
+
           .black-big {
-            font-size: 72px;
-            font-weight: 700;
             color: #282828;
           }
           .blue-big {
-            margin-left: 20px;
-            font-size: 72px;
-            font-weight: 700;
             background: linear-gradient(266.17deg, #4aa8ff 46.86%, #6c69fb 99.96%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -51,13 +50,13 @@
         }
       }
       .sub-title {
-        margin-top: 24px;
-        margin-bottom: 68px;
+        margin: 24px 0 68px;
         .row-text {
           font-weight: 500;
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 24px;
+          line-height: 34px;
           text-align: center;
+          white-space: pre-line;
         }
       }
       .main-video {
@@ -155,8 +154,83 @@
           cursor: pointer;
         }
       }
-      &.margin-top-200 {
-        margin-top: 200px;
+      &.eqhub {
+        margin-top: 210px;
+        width: 100%;
+
+        .eqhub-header {
+          margin-bottom: 68px;
+          &-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            line-height: 48px;
+
+            &.highlight {
+              background: linear-gradient(266.17deg, #4aa8ff 46.86%, #6c69fb 99.96%);
+              -webkit-background-clip: text;
+              color: transparent;
+            }
+          }
+        }
+
+        .eqhub-video {
+          margin-bottom: 68px;
+          width: 784px;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+          &-src {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+
+        .eqhub-more-button {
+          width: 145px;
+          height: 47px;
+          border-radius: 8px;
+          color: #125488;
+          font-weight: 500;
+          border: 1px solid #125488;
+          background-color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      &.service {
+        margin-top: 180px;
+
+        .service-header {
+          margin-bottom: 72px;
+          .service-title-wrapper {
+            margin-bottom: 24px;
+
+            .service-title {
+              font-size: 40px;
+              font-weight: 700;
+              text-align: center;
+              color: #000;
+              line-height: 48px;
+
+              .highlight {
+                background: linear-gradient(266.17deg, #4aa8ff 46.86%, #6c69fb 99.96%);
+                -webkit-background-clip: text;
+                color: transparent;
+              }
+            }
+          }
+
+          .service-sub-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            text-align: center;
+            line-height: 26px;
+          }
+        }
         .card-wrapper {
           display: flex;
           justify-content: space-between;
@@ -185,6 +259,7 @@
             width: 428px;
             .blue-title {
               margin-bottom: 10px;
+              line-height: 29px;
               font-size: 24px;
               font-weight: 700;
               background: linear-gradient(266.17deg, #4aa8ff 46.86%, #6c69fb 99.96%);
@@ -195,6 +270,7 @@
             }
             .title {
               margin-bottom: 24px;
+              line-height: 48px;
               font-size: 40px;
               font-weight: 700;
             }
@@ -343,66 +419,6 @@
       }
       &.business {
         margin-top: 162px;
-      }
-      .platform-card-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 80px;
-        width: 900px;
-        .platform-card {
-          width: 290px;
-          height: 411px;
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-          border-radius: 12px;
-
-          &-image {
-            position: relative;
-            width: 100%;
-            height: 220px;
-
-            &-src {
-              position: absolute;
-              top: -37px;
-              left: 50%;
-              transform: translateX(-50%);
-              width: 252px;
-              object-fit: contain;
-            }
-          }
-
-          &-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 18px 20px;
-            width: 100%;
-            height: 190px;
-            color: #000;
-            border-top: 1px solid #f1f1f1;
-
-            &-title {
-              font-size: 18px;
-              font-weight: 600;
-            }
-
-            &-description {
-              font-size: 14px;
-              font-weight: 400;
-            }
-
-            &-link {
-              margin: 0 0 0 auto;
-              color: #156baf;
-              font-size: 14px;
-              font-weight: 400;
-              text-decoration: underline;
-
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-        }
       }
     }
   }

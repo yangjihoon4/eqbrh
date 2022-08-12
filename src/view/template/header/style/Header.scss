@@ -39,11 +39,10 @@ header {
         &:not(:last-child) {
           margin-right: 36px;
         }
-        &.selected{
-          border-bottom: 2px solid #156BAF;
+        &.selected {
+          border-bottom: 2px solid #204c93;
           font-weight: 500;
         }
-
       }
 
       .link-blue-btn {
@@ -53,12 +52,12 @@ header {
         width: 145px;
         height: 48px;
         margin-left: 20px;
-        background-color: #125488;
+        // background-color: #125488;
+        background: #204c93;
         border-radius: 8px;
         color: #ffffff;
         cursor: pointer;
       }
     }
   }
-
 }
