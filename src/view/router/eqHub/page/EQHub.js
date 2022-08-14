@@ -119,7 +119,9 @@ function EqHub(props) {
       <div className="eqhub-section5">
         <div className="eqhub-section5-title">
           <span className="text-40">
-            EQ Hub, <span className="gradient-text">How It Works</span>
+            EQ Hub
+            <br />
+            <span className="gradient-text">How It Works</span>
           </span>
         </div>
         <EQHubSection5Tab selectedTool={selectedToolInfo} setSelectedTool={setSelectedToolInfo} />
@@ -127,7 +129,8 @@ function EqHub(props) {
       <div className="eqhub-section6">
         <div className="eqhub-section6-title">
           <span className="text-40">
-            <span className="gradient-text">Projects and Clients</span> of EQ Hub
+            <span className="gradient-text">Projects and Clients</span> <br />
+            of EQ Hub
           </span>
         </div>
         <div className="eqhub-section6-example-container">

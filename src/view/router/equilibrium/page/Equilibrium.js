@@ -28,7 +28,7 @@ function Equilibrium(props) {
             <div className="equilibrium-section1-text-title">IN BLOCKCHAIN</div>
           </div>
           <div className="equilibrium-section1-text-sub-title-wrapper">
-            <div className="equilibrium-section1-text-sub-title">{"The commercially viable blockchain technology"}</div>
+            <div className="equilibrium-section1-text-sub-title">{"The commercially viable blockchain engine"}</div>
           </div>
         </div>
         <img className="equilibrium-section1-image" src={Equilibrium_Section1_Image} alt="" />
