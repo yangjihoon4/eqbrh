@@ -48,8 +48,8 @@ const TEAM_LIST = [
     members: [
       { name: "Soon Kim", position: "CEO", image: soonKimImage, sns: {} },
       { name: "Ted Kim", position: "CPO", image: tedKimImage, sns: {} },
-      { name: "Tony Kueh", position: "CTO", image: tonyKuehImage, sns: {} },
-      { name: "Heather Goldman", position: "CFO", image: heatherGoldmanImage, sns: {} },
+      { name: "Tony Kueh", position: "Advisor", image: tonyKuehImage, sns: {} },
+      { name: "Heather Goldman", position: "Advisor", image: heatherGoldmanImage, sns: {} },
     ],
   },
   {
