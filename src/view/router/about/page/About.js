@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import TextHighLight from "../../../atom/text/TextHighLight";
 import TeamsContainer from "../components/teamsContainer/TeamsContainer";
 import "./style/About.scss";
@@ -18,6 +17,9 @@ import youngminBangImage from "../../../assets/images/about/APND_youngmin_bang_i
 import insuChoiImage from "../../../assets/images/about/APND_insu_choi_img.png";
 import NoticeNews from "../../../template/notice/NoticeNews";
 import mainImage from "../../../assets/images/about/about_main_image.png";
+import news1Image from "../../../assets/images/about/news1.png";
+import news2Image from "../../../assets/images/about/news2.png";
+import news3Image from "../../../assets/images/about/news3.png";
 
 const TEAM_LIST = [
   {
@@ -63,28 +65,61 @@ const TEAM_LIST = [
   },
 ];
 
+const NEWS_LIST = [
+  {
+    title: "EQBR Announces the Launch of My Flex, Its US-based NFT Startup for Enterprise and Consumer",
+    description: "",
+    image: news1Image,
+    type: "news",
+    date: "08. 15. 2022",
+    link: "https://www.coinspeaker.com/eqbr-announces-launch-my-flex-nft-startup",
+  },
+  {
+    title: "Volare Network, the First Commercial Blockchain Network, Releases Volare Business White Paper 1.0",
+    description: "",
+    image: news2Image,
+    type: "news",
+    date: "08. 15. 2022",
+    link: "https://www.coinspeaker.com/volare-network-releases-volare-business-white-paper",
+  },
+  {
+    title: "Attorney Cheong Sung Koo takes on a new challenge as a 'Startup CEO'",
+    description: "",
+    image: news3Image,
+    type: "news",
+    date: "07. 18. 2022",
+    link: "https://m.lawtimes.co.kr/Content/Article?serial=180259",
+  },
+];
+
 function About(props) {
   return (
     <div id="About">
-      <section className="about-main">
-        <div className="about-main-content">
-          <div className="about-main-content-title">
-            <p>WE WILL STRIVE</p>
-            <p>TO LIVE UP</p>
-            <p>
-              TO <TextHighLight text={`OUR VISION`} />
-            </p>
-          </div>
-          <div className="about-main-content-sub-title">As a forerunner of upcoming Web 3.0</div>
-        </div>
-        <img className="about-main-image" src={mainImage} alt="main" />
-      </section>
+      <MainSection />
       <Manifesto />
       <OurTeams />
-      <NoticeNews />
+      <NoticeNews data={NEWS_LIST} />
     </div>
   );
 }
+
+const MainSection = (props) => {
+  return (
+    <section className="about-main">
+      <div className="about-main-content">
+        <div className="about-main-content-title">
+          <p>WE WILL STRIVE</p>
+          <p>TO LIVE UP</p>
+          <p>
+            TO <TextHighLight text={`OUR VISION`} />
+          </p>
+        </div>
+        <div className="about-main-content-sub-title">As a forerunner of upcoming Web 3.0</div>
+      </div>
+      <img className="about-main-image" src={mainImage} alt="main" />
+    </section>
+  );
+};
 
 const Manifesto = (props) => {
   return (
