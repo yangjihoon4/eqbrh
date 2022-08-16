@@ -80,7 +80,7 @@ const NEWS_LIST = [
     image: news2Image,
     type: "news",
     date: "08. 15. 2022",
-    link: "https://www.coinspeaker.com/volare-network-releases-volare-business-white-paper",
+    link: "https://cryptopotato.com/volare-network-released-volare-business-white-paper-1-0-with-volare-public-sale-announcement/",
   },
   {
     title: "Attorney Cheong Sung Koo takes on a new challenge as a 'Startup CEO'",
