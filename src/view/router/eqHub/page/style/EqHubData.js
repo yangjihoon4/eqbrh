@@ -11,10 +11,6 @@ import Sale_black_Icon from "../../../../assets/images/eqHub/EQHub_Section3_Sale
 
 import Section3_Source_Image from "../../../../assets/images/eqHub/Equilibrium_Section3_Source_Image.png";
 
-import Section4_Image1 from "../../../../assets/images/eqHub/EqHub_Section4_Image1.png";
-import Section4_Image2 from "../../../../assets/images/eqHub/EqHub_Section4_Image2.png";
-import Section4_Image3 from "../../../../assets/images/eqHub/EqHub_Section4_Image3.png";
-
 export const EqHubSection2CardData = [
   {
     amount: 5,
@@ -70,20 +66,5 @@ export const EqHubSection5TabData = [
     title: "SALES",
     description: "Register a sale event for the token on Launchpad.",
     source: Section3_Source_Image,
-  },
-];
-
-export const EqHubSection4CardData = [
-  {
-    image: Section4_Image1,
-    link: "",
-  },
-  {
-    image: Section4_Image2,
-    link: "http://www.creditconnect.co.kr/",
-  },
-  {
-    image: Section4_Image3,
-    link: "https://www.xingxingmobility.com/",
   },
 ];

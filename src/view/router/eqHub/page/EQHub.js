@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style/EqHub.scss";
 import EQHub_section1_Image from "../../../assets/images/eqHub/EQHub_Section1_Image.png";
-import { EqHubSection5TabData, EqHubSection4CardData } from "./style/EqHubData";
+import { EqHubSection5TabData } from "./style/EqHubData";
 import EQHub_Section5_Add from "../../../assets/images/eqHub/EQHub_Section5_Add_Icon.png";
 import EQHub_Section5_Hide from "../../../assets/images/eqHub/EQHub_Section5_Hide_Icon.png";
 import explainImage from "../../../assets/images/eqHub/explain_image.png";
@@ -13,6 +13,10 @@ import businessImage2 from "../../../assets/images/eqHub/business_image2.png";
 import businessImage3 from "../../../assets/images/eqHub/business_image3.png";
 import dotBackground from "../../../assets/images/eqHub/dotBackground.png";
 import { Link } from "react-router-dom";
+
+import projectImage1 from "../../../assets/images/eqHub/EqHub_project_Image1.png";
+import projectImage2 from "../../../assets/images/eqHub/EqHub_project_Image2.png";
+import projectImage3 from "../../../assets/images/eqHub/EqHub_project_Image3.png";
 
 const HUB_INTRODUCE = [
   {
@@ -38,7 +42,7 @@ const BUSINESS_SERVICE_LIST = [
     label: "DAPP CENTER",
     description: "Developers can easily upload their dAPPs on dAPP Center to create their own blockchain services.",
     img: businessImage1,
-    link: "",
+    link: ``,
   },
   {
     id: 2,
@@ -55,6 +59,25 @@ const BUSINESS_SERVICE_LIST = [
     link: "",
   },
 ];
+
+const EQHUB_PROJECT_LIST = [
+  {
+    id: 1,
+    image: projectImage1,
+    link: "https://www.hankyung.com/it/article/202204055784g",
+  },
+  {
+    id: 2,
+    image: projectImage2,
+    link: "http://creativemoh.com/index",
+  },
+  {
+    id: 3,
+    image: projectImage3,
+    link: "https://www.xingxingmobility.com/",
+  },
+];
+
 function EqHub(props) {
   const [selectedToolInfo, setSelectedToolInfo] = useState("network");
 
@@ -134,7 +157,7 @@ function EqHub(props) {
           </span>
         </div>
         <div className="eqhub-section6-example-container">
-          {EqHubSection4CardData.map((el, index) => {
+          {EQHUB_PROJECT_LIST.map((el, index) => {
             return <EQHubSection6Card data={el} key={index} />;
           })}
         </div>

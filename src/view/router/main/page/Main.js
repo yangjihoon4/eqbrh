@@ -13,6 +13,7 @@ import appstoreIcon from "../../../assets/images/main/app_store_icon.png";
 import googlestoreIcon from "../../../assets/images/main/google_store_icon.png";
 import whisperVideo1 from "../../../assets/video/whisper1_video.mp4";
 import whisperVideo2 from "../../../assets/video/whisper2_video.mp4";
+import eqhubVideo1 from "../../../assets/video/eqhub1_video.mp4";
 import { useNavigate } from "react-router-dom";
 
 function Main(props) {
@@ -82,7 +83,7 @@ function Main(props) {
           </div>
           <div className="eqhub-video">
             <video className="eqhub-video-src" muted autoPlay loop>
-              <source src={whisperVideo2} type="video/mp4" />
+              <source src={eqhubVideo1} type="video/mp4" />
             </video>
           </div>
           <button
