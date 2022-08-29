@@ -6,6 +6,38 @@ import { EquilibriumData, EquilibriumSection4Data } from "./EquilibriumData";
 import { useNavigate } from "react-router-dom";
 import EquilibriumSection3Image1 from "../../../assets/images/equilibrium/Equilibrium_Section3_Image1.png";
 import EquilibriumSection3Image2 from "../../../assets/images/equilibrium/Equilibrium_Section3_Image2.png";
+import EquilibriumSection3Image3 from "../../../assets/images/equilibrium/Equilibrium_Section3_Image3.png";
+import technicalReferencesImage1 from "../../../assets/images/equilibrium/technical_references_image_1.png";
+import technicalReferencesImage2 from "../../../assets/images/equilibrium/technical_references_image_2.png";
+import technicalReferencesImage3 from "../../../assets/images/equilibrium/technical_references_image_3.png";
+import NoticeNews from "../../../template/notice/NoticeNews";
+
+const TECHNICAL_REFERENCES_LIST = [
+  {
+    title: "Equilibrium Consensus (1)",
+    description: "Hello, welcome back to Volare! Today, we would like to delve ourselves a...",
+    image: technicalReferencesImage1,
+    type: "ARTICLE",
+    date: "07. 14. 2022",
+    link: "https://medium.com/eqbr/equilibrium-consensus-1-3b0abc95c7d4",
+  },
+  {
+    title: "Equilibrium Consensus (2)",
+    description: "Hello, this is Volare. Today, we’re going to briefly introduce the core of the...",
+    image: technicalReferencesImage2,
+    type: "ARTICLE",
+    date: "07. 14. 2022",
+    link: "https://medium.com/eqbr/equilibrium-consensus-2-a64ca9fd1d20",
+  },
+  {
+    title: "Equilibrium Micro Chain Structure (1)",
+    description: "Today, we would like to dip into the evolution of the service server...",
+    image: technicalReferencesImage3,
+    type: "ARTICLE",
+    date: "07. 14. 2022",
+    link: "https://medium.com/eqbr/equilibrium-micro-chain-structure-1-b6eba253f6c2",
+  },
+];
 
 function Equilibrium(props) {
   const navigate = useNavigate();
@@ -66,9 +98,11 @@ function Equilibrium(props) {
         </div>
 
         <div className="equilibrium-section4-description">
-          {`We are proudly engaged in government funded\nresearch project in partnership with\nprestigious scientific organizations in South Korea.\nThe project, Blockchain Technology for Data-driven Economy,\naims to effectively  compose an equalizer in large cluster of nodes.`}
+          {`The project, Blockchain Technology for Data-driven Economy,\naims to effectively  compose an equalizer in large cluster of nodes.`}
         </div>
       </div>
+      <NoticeNews data={TECHNICAL_REFERENCES_LIST} title={`Technical References`} readMore={"https://medium.com/eqbr/technology/home"} />
+
       {/* <div className="equilibrium-section5">
         <div className="equilibrium-section5-title-wrapper">
           <div className="equilibrium-section5-title">Let's Build Your Own</div>
@@ -126,6 +160,19 @@ const DifferentiateList = () => {
           </p>
           <span className="differentiate-list-item-text-description">
             {`Equilibrium engine employs MSA to design each service\ndomain as a ‘Micro Chain’, isolating failures and verloads\nbetween Micro Chains, and ultimately improving\nscalability of the entire network.`}
+          </span>
+        </div>
+      </div>
+      <div className="differentiate-list-item">
+        <div className="differentiate-list-item-img">
+          <img src={EquilibriumSection3Image3} alt="EVM" className="differentiate-list-item-img-src" />
+        </div>
+        <div className="differentiate-list-item-text">
+          <p className="differentiate-list-item-text-title">
+            Supporting <span className="highlight">EVM</span>
+          </p>
+          <span className="differentiate-list-item-text-description">
+            {`EVM allows Ethereum-based smart contracts to be\nutilized, making it easy for Ethereum developers\nto create blockchain services using Equilibrium.`}
           </span>
         </div>
       </div>

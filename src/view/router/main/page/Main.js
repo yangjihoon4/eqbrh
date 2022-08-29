@@ -13,8 +13,31 @@ import appstoreIcon from "../../../assets/images/main/app_store_icon.png";
 import googlestoreIcon from "../../../assets/images/main/google_store_icon.png";
 import whisperVideo1 from "../../../assets/video/whisper1_video.mp4";
 import whisperVideo2 from "../../../assets/video/whisper2_video.mp4";
-import eqhubVideo1 from "../../../assets/video/eqhub1_video.mp4";
 import { useNavigate } from "react-router-dom";
+import TextHighLight from "../../../atom/text/TextHighLight";
+
+const EQBR_HISTORYS = [
+  {
+    year: 2018,
+    description: `Research initiative for blockchain technology\nDevelop Blockchain Engine prototype`,
+  },
+  {
+    year: 2019,
+    description: `Develop blockchain Messenger prototype\nDevelop Digital Wallet prototype`,
+  },
+  {
+    year: 2020,
+    description: `Incorporated as EQBR Holdings Co.,Ltd.\nDevelop ‘Equilibrium’ v1.0\nLaunch ‘Whisper MSG’ Secured Messenger`,
+  },
+  {
+    year: 2021,
+    description: `Engage in a government-led research project\nUpgrade ‘Equilibrium’ v2.0\nUpdate ‘Whisper MSG’ with Digital Wallet `,
+  },
+  {
+    year: 2022,
+    description: `Upgrade ‘Equilibrium’ v3.0, supporting EVM\nUpdate ‘Whisper MSG’, Web 3.0 Platform\nLaunch ‘EQ Hub’, Blockchain Solution`,
+  },
+];
 
 function Main(props) {
   const navigate = useNavigate();
@@ -41,7 +64,7 @@ function Main(props) {
           {/*    Infographic*/}
           {/*</div>*/}
         </div>
-        <div className="content-box-wrapper margin-top-160">
+        {/* <div className="content-box-wrapper margin-top-160">
           <div className="title">
             <div className="row-wrapper line-height-60">
               <div className="black-medium">Everything Starts From Here</div>
@@ -75,8 +98,8 @@ function Main(props) {
               </button>
             </div>
           </div>
-        </div>
-        <div className="content-box-wrapper eqhub">
+        </div> */}
+        {/* <div className="content-box-wrapper eqhub">
           <div className="eqhub-header">
             <div className="eqhub-header-title">One-stop Blockchain Solution</div>
             <div className="eqhub-header-title highlight">EQ Hub</div>
@@ -95,7 +118,8 @@ function Main(props) {
           >
             Learn more
           </button>
-        </div>
+        </div> */}
+        <EQBRWeb3Introduce />
         <div className="content-box-wrapper service">
           <div className="service-header">
             <div className="service-title-wrapper">
@@ -108,8 +132,10 @@ function Main(props) {
           <div className="card-wrapper first">
             <img className="card-img whisper" src={mainImage9} />
             <div className="detail-wrapper">
-              <div className="blue-title">Super App for Web 3.0</div>
-              <div className="title">Whisper MSG</div>
+              <div className="sub-title">Super App for Web 3.0</div>
+              <div className="title">
+                <TextHighLight text={"Whisper MSG"} />
+              </div>
               <div className="description">
                 {`Ultimate secure messenger and wallet based on\nblockchain technology. Whisper is a key\napplication that makes EQ Hub a Platform.\nNumorous dAPPs or Projects will be deployed and\nconnected through Whisper.`}
               </div>
@@ -136,51 +162,47 @@ function Main(props) {
             </div>
           </div>
           <div className="card-wrapper reverse">
-            <img className="card-img volare" src={mainImage10} />
+            <img className="card-img equilibrium" src={mainImage10} />
             <div className="detail-wrapper">
-              <div className="blue-title">Layer 1, Blockchain Network Project</div>
-              <div className="title">Volare Network</div>
+              <div className="sub-title">Blockchain Engine</div>
+              <div className="title">
+                <TextHighLight text={"Equilibrium"} />
+              </div>
               <div className="description">
-                {`Volare Network is the first project to construct\na vast ecosystem based on blockchain networks\ndeploying Equilibrium technology. While its\nultimate goal is to use the high speed and\nscalability of Equilibrium to promote the\ncommercial use of blockchain technology across\nseveral industries, the Volare Network is first\naiming to actively attract highly accessible dApps,\nin particular blockchain-based games.`}
+                {`A new blockchain engine that can surpass the\nperformance of not only first and second\ngeneration blockchain networks, but other\nexisting third generation blockchain networks,\nin terms of speedand the scalability.`}
               </div>
               <div className="link-wrapper">
-                <div className="sns-wrapper">
-                  <img className="sns-icon" src={volareIcon} alt="volare" onClick={() => window.open("https://volare.network/")} />
-                  <img className="sns-icon" src={twitterIcon} alt="twitter" onClick={() => window.open("https://twitter.com/volare_official")} />
-                  <img className="sns-icon" src={mediumIcon} alt="medium" onClick={() => window.open("https://medium.com/@Volare_Official")} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card-wrapper">
-            <img className="card-img myFlex" src={mainImage11} />
-            <div className="detail-wrapper">
-              <div className="blue-title">NFT Market Place</div>
-              <div className="title">MyFlex</div>
-              <div className="description">
-                {`MyFlex, US-based NFT Startup, delivers a peer-\nto-peer platform and services for enterprises and\nconsumers which brings value of authenticity\nthrough the first commercially viable,\ndecentralized NFT digital marketplace.`}
-              </div>
-              <div className="link-wrapper">
-                <button className="more-button" disabled>
-                  Coming soon
+                <button
+                  className="more-button"
+                  onClick={() => {
+                    navigate("/equilibrium");
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                  }}
+                >
+                  Learn more
                 </button>
               </div>
             </div>
           </div>
-          <div className="card-wrapper reverse">
-            <img className="card-img APND" src={mainImage12} />
+          <div className="card-wrapper">
+            <img className="card-img eqHub" src={mainImage11} />
             <div className="detail-wrapper">
-              <div className="blue-title">STO Platfrom</div>
+              <div className="sub-title">Blockchain Solution</div>
               <div className="title">
-                <div>A Panda Partners</div>
-                <div>(APND)</div>
+                <TextHighLight text={"EQ HUB"} />
               </div>
               <div className="description">
-                {`STO(Security Token Offering) Project in progress\nwith major financial institutions. The Innovative\nfinancial service using blockchain technology will\nbe launched within this year after designating of\nthe Financial Regulatory Sandbox in South Korea.`}
+                {`Easily create blockchain network and develop,\noperate and distribute various blockchain services\nwith EQ Developer.`}
               </div>
               <div className="link-wrapper">
-                <button className="more-button" disabled>
-                  Coming soon
+                <button
+                  className="more-button"
+                  onClick={() => {
+                    navigate("/eq-hub");
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                  }}
+                >
+                  Learn more
                 </button>
               </div>
             </div>
@@ -197,5 +219,42 @@ function Main(props) {
     </div>
   );
 }
+
+const EQBRWeb3Introduce = () => {
+  // TODO :: text-description top, bottom 수정해야 함..
+  return (
+    <section className="eqbr-web3-introduce">
+      <div className="eqbr-web3-introduce-title">
+        <span>Leading the Future of </span>
+        <TextHighLight text={"Web 3.0"} />
+      </div>
+      <div className="text-container">
+        <div className="text-main">{`EQBR proposes a New Web 3.0 Platform\nin which users can readily access services.`}</div>
+        <div className="text-description top">{`To enhance the utility and convenience of users,\nWhisper MSG allows users to access various services\nthrough a one-time login with the assigned private key,\nand connect service wallets to Whisper MSG wallet.`}</div>
+        <div className="text-description bottom">{`User privacy is also greatly fortified as user information\ncan only be accessed by a user with the private key.`}</div>
+      </div>
+      <div className="eqbr-history">
+        <div className="eqbr-history-title">
+          <span>Breaking </span>
+          <TextHighLight text={"New Ground"} />
+        </div>
+        <div className="eqbr-history-container">
+          <div className="eqbr-history-container-box">
+            <div className="eqbr-history-content-wrapper">
+              {EQBR_HISTORYS.map((el) => {
+                return (
+                  <div className="eqbr-history-content">
+                    <p className="eqbr-history-content-year">{el.year}</p>
+                    <p className="eqbr-history-content-description">{el.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Main;

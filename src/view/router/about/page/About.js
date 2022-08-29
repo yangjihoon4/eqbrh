@@ -24,45 +24,45 @@ import news3Image from "../../../assets/images/about/news3.png";
 const TEAM_LIST = [
   {
     companyName: "EQBR Holdings",
-    location: "South Korea",
+    location: "Seoul, South Korea",
     description: `EQBR Holdings is a holding company for EQBR\nGroup and operates a main R&D research center for\nthe underlying blockchain technologies.`,
     members: [
-      { name: "Paul J. Lee", position: "Chairman, Founder", image: paulJLeeImage, sns: {} },
-      { name: "Hyunki Lee", position: "CEO, CTO", image: hyunkiLeeImage, sns: {} },
-      { name: "Jinsu Han", position: "HEAD OF RESEARCH CENTER", image: jinsuHanImage, sns: {} },
-      { name: "Jekun Jung", position: "CBO", image: jekunJungImage, sns: {} },
-      { name: "Jinho Huh", position: "Advisor", image: jinhoHuhImage, sns: {} },
+      { name: "Paul J. Lee", position: "Chairman, Founder", image: paulJLeeImage, linkedIn: `https://www.linkedin.com/in/paulus-j-lee-058265232/` },
+      { name: "Hyunki Lee", position: "CEO, CTO", image: hyunkiLeeImage, linkedIn: `` },
+      { name: "Jinsu Han", position: "HEAD OF RESEARCH CENTER", image: jinsuHanImage, linkedIn: `https://www.linkedin.com/in/jin-su-han-88626522b/` },
+      { name: "Jekun Jung", position: "CBO", image: jekunJungImage, linkedIn: `https://www.linkedin.com/in/jekun-jung-73460654/` },
+      { name: "Jinho Huh", position: "Advisor", image: jinhoHuhImage, linkedIn: `https://www.linkedin.com/in/hurxyz/` },
     ],
   },
   {
     companyName: "EQBR Networks",
-    location: " Singapore",
+    location: "Singapore",
     description: `EQBR Networks directly operates various\nblockchain-based services, with a focus on\nSoutheast Asian region.`,
     members: [
-      { name: "Thomas S. Cheong", position: "CEO", image: thomasSCheongImage, sns: {} },
-      { name: "Michael M. Lee", position: "CMO", image: MichaelMLeeImage, sns: {} },
+      { name: "Thomas S. Cheong", position: "CEO", image: thomasSCheongImage, linkedIn: `https://www.linkedin.com/in/seongkoo-cheong-134a8523/` },
+      { name: "Michael M. Lee", position: "CMO", image: MichaelMLeeImage, linkedIn: `https://www.linkedin.com/in/michael-lee-6181111b4/` },
     ],
   },
   {
     companyName: "MyFlex",
-    location: "USA",
+    location: "San Francisco, CA, USA",
     description: `My Flex is a U.S. based company running an NFT\nmarketplace.  The company also functions as the\nbase for global expansion of EQ Hub's ecosystem.`,
     members: [
-      { name: "Soon Kim", position: "CEO", image: soonKimImage, sns: {} },
-      { name: "Ted Kim", position: "CPO", image: tedKimImage, sns: {} },
-      { name: "Tony Kueh", position: "Advisor", image: tonyKuehImage, sns: {} },
-      { name: "Heather Goldman", position: "Advisor", image: heatherGoldmanImage, sns: {} },
+      { name: "Soon Kim", position: "CEO", image: soonKimImage, linkedIn: `https://www.linkedin.com/in/soon-kim-b316a427/` },
+      { name: "Ted Kim", position: "CPO", image: tedKimImage, linkedIn: `https://www.linkedin.com/in/tedhongkim/` },
+      { name: "Tony Kueh", position: "Advisor", image: tonyKuehImage, linkedIn: `https://www.linkedin.com/in/tonykueh/` },
+      { name: "Heather Goldman", position: "Advisor", image: heatherGoldmanImage, linkedIn: `https://www.linkedin.com/in/heather-goldman-002353a4/` },
     ],
   },
-  {
-    companyName: "A Panda Partners (APND)",
-    location: "South Korea",
-    description: `APND is a STO financial platform initiated by EQBR\nin partnership with leading financial institutions in\nSouth Korea.`,
-    members: [
-      { name: "Young-Min Bang", position: "CEO", image: youngminBangImage, sns: {} },
-      { name: "In-Su Choi", position: "COO", image: insuChoiImage, sns: {} },
-    ],
-  },
+  // {
+  //   companyName: "A Panda Partners (APND)",
+  //   location: "South Korea",
+  //   description: `APND is a STO financial platform initiated by EQBR\nin partnership with leading financial institutions in\nSouth Korea.`,
+  //   members: [
+  //     { name: "Young-Min Bang", position: "CEO", image: youngminBangImage, linkedIn: `` },
+  //     { name: "In-Su Choi", position: "COO", image: insuChoiImage, linkedIn: `` },
+  //   ],
+  // },
 ];
 
 const NEWS_LIST = [
@@ -70,7 +70,7 @@ const NEWS_LIST = [
     title: "EQBR Announces the Launch of My Flex, Its US-based NFT Startup for Enterprise and Consumer",
     description: "",
     image: news1Image,
-    type: "news",
+    type: "NEWS",
     date: "08. 15. 2022",
     link: "https://www.coinspeaker.com/eqbr-announces-launch-my-flex-nft-startup",
   },
@@ -78,7 +78,7 @@ const NEWS_LIST = [
     title: "Volare Network, the First Commercial Blockchain Network, Releases Volare Business White Paper 1.0",
     description: "",
     image: news2Image,
-    type: "news",
+    type: "NEWS",
     date: "08. 15. 2022",
     link: "https://cryptopotato.com/volare-network-released-volare-business-white-paper-1-0-with-volare-public-sale-announcement/",
   },
@@ -86,7 +86,7 @@ const NEWS_LIST = [
     title: "Attorney Cheong Sung Koo takes on a new challenge as a 'Startup CEO'",
     description: "",
     image: news3Image,
-    type: "news",
+    type: "NEWS",
     date: "07. 18. 2022",
     link: "https://m.lawtimes.co.kr/Content/Article?serial=180259",
   },
@@ -98,7 +98,7 @@ function About(props) {
       <MainSection />
       <Manifesto />
       <OurTeams />
-      <NoticeNews data={NEWS_LIST} />
+      <NoticeNews data={NEWS_LIST} title={`News & Articles`} />
     </div>
   );
 }

@@ -30,11 +30,37 @@
   }
 
   .eqhub-section2 {
-    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 
-    .eqhub-section2-card-container {
-      display: flex;
-      justify-content: space-between;
+    .eqhub-video {
+      margin-bottom: 68px;
+      width: 784px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+      &-src {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .eqhub-more-button {
+      width: 145px;
+      height: 47px;
+      border-radius: 8px;
+      color: #204c93;
+      font-weight: 500;
+      border: 1px solid #204c93;
+      background-color: #fff;
+      cursor: pointer;
+
+      &:disabled {
+        cursor: default;
+      }
     }
   }
 
@@ -233,8 +259,11 @@
     }
 
     .eqhub-section6-example-container {
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      grid-gap: 36px;
     }
   }
 

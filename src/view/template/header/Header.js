@@ -6,6 +6,10 @@ import { useLocation } from "react-router-dom";
 
 const HeaderTab = [
   {
+    label: "Home",
+    route: "/",
+  },
+  {
     label: "Equilibrium",
     route: "/equilibrium",
   },
@@ -44,6 +48,7 @@ function Header(props) {
           <img
             className="logo-img"
             src={logo}
+            alt={"logo"}
             onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               navigate("/");
@@ -58,9 +63,9 @@ function Header(props) {
               </div>
             );
           })}
-          <div className="link-blue-btn" style={{ cursor: "default" }}>
+          {/* <div className="link-blue-btn" style={{ cursor: "default" }}>
             Get started
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import React from "react";
 import TextHighLight from "../../../../atom/text/TextHighLight";
 import "./style/TeamsContainer.scss";
+import linkedInIcon from "../../../../assets/images/about/linked_in_icon.png";
 
 const TeamsContainer = (props) => {
   const { data } = props || {};
@@ -26,16 +27,27 @@ const TeamsContainer = (props) => {
 
 const MemberCard = (props) => {
   const { data } = props || {};
-  const { name, position, image, sns } = data || {};
+  const { name, position, image, linkedIn } = data || {};
   return (
     <div className="member-card" key={`member-${name}`}>
       <div className="member-card-image">
-        <img src={image} className="member-card-image-src" alt="member" />
+        <img
+          src={image}
+          className="member-card-image-src"
+          alt="member"
+          onClick={() => {
+            if (linkedIn) window.open(linkedIn);
+          }}
+        />
       </div>
       <div className="member-card-info">
         <div className="member-card-info-name">{name}</div>
         <div className="member-card-info-position">{position}</div>
-        <div className="member-card-info-sns"></div>
+        {linkedIn && (
+          <div className="member-card-info-linked-in" onClick={() => window.open(linkedIn)}>
+            <img className="member-card-info-linked-in-src" src={linkedInIcon} alt="linked-in" />
+          </div>
+        )}
       </div>
     </div>
   );

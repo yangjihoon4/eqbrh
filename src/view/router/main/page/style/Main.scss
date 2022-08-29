@@ -174,30 +174,6 @@
             }
           }
         }
-
-        .eqhub-video {
-          margin-bottom: 68px;
-          width: 784px;
-          height: auto;
-          border-radius: 10px;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
-          &-src {
-            width: 100%;
-            border-radius: 10px;
-          }
-        }
-
-        .eqhub-more-button {
-          width: 145px;
-          height: 47px;
-          border-radius: 8px;
-          color: #125488;
-          font-weight: 500;
-          border: 1px solid #125488;
-          background-color: #fff;
-          cursor: pointer;
-        }
       }
 
       &.service {
@@ -242,14 +218,11 @@
             &.whisper {
               width: 292px;
             }
-            &.volare {
+            &.equilibrium {
               width: 381px;
             }
-            &.myFlex {
-              width: 376px;
-            }
-            &.APND {
-              width: 383px;
+            &.eqHub {
+              width: 402px;
             }
           }
           .detail-wrapper {
@@ -257,22 +230,18 @@
             flex-direction: column;
             justify-content: center;
             width: 428px;
-            .blue-title {
-              margin-bottom: 10px;
-              line-height: 29px;
-              font-size: 24px;
-              font-weight: 700;
-              background: linear-gradient(266.17deg, #4aa8ff 46.86%, #6c69fb 99.96%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              background-clip: text;
-              text-fill-color: transparent;
-            }
             .title {
               margin-bottom: 24px;
               line-height: 48px;
               font-size: 40px;
               font-weight: 700;
+            }
+            .sub-title {
+              margin-bottom: 10px;
+              line-height: 30px;
+              font-size: 24px;
+              font-weight: 700;
+              color: #282828;
             }
             .description {
               font-size: 18px;
@@ -425,5 +394,111 @@
   a {
     text-decoration: none;
     color: #000;
+  }
+
+  .eqbr-web3-introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160px;
+
+    &-title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    .text-container {
+      margin-top: 54px;
+      max-width: 548px;
+
+      .text {
+        &-main {
+          padding: 25px 0;
+          line-height: 36px;
+          font-size: 24px;
+          font-weight: 500;
+          color: #282828;
+          text-align: center;
+          white-space: pre-line;
+          border-top: 1px solid #979797;
+          border-bottom: 1px solid #979797;
+        }
+
+        &-description {
+          line-height: 30px;
+          font-size: 20px;
+          font-weight: 400;
+          color: #000;
+          text-align: center;
+          white-space: pre-line;
+
+          &.top {
+            margin-top: 48px;
+          }
+
+          &.bottom {
+            margin-top: 48px;
+          }
+        }
+      }
+    }
+
+    .eqbr-history {
+      margin-top: 140px;
+
+      &-title {
+        margin-bottom: 54px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
+      }
+
+      &-container {
+        padding: 0 200px;
+        &-box {
+          border-left: 2px solid #204c93;
+        }
+
+        .eqbr-history-content-wrapper {
+          padding: 75px 0;
+          .eqbr-history-content {
+            position: relative;
+            margin-left: 48px;
+            height: 152px;
+
+            &::before {
+              position: absolute;
+              top: 4px;
+              left: -60px;
+              content: "";
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              border: 2px solid #204c93;
+              background-color: #fafafa;
+            }
+
+            &-year {
+              margin-bottom: 10px;
+              color: #204c93;
+              line-height: 30px;
+              font-size: 24px;
+              font-weight: 700;
+            }
+
+            &-description {
+              line-height: 26px;
+              font-size: 18px;
+              font-weight: 400;
+              color: #868686;
+              white-space: pre-line;
+            }
+          }
+        }
+      }
+    }
   }
 }

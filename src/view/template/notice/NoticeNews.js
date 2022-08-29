@@ -2,14 +2,18 @@ import React from "react";
 import "./style/NoticeNews.scss";
 
 const NoticeNews = (props) => {
-  const { data } = props || {};
+  const { data, title, readMore } = props || {};
+
+  const goToReadmore = () => {
+    window.open(readMore);
+  };
 
   return (
     <section className="notice-news">
       <div className="notice-news-container">
         <div className="notice-news-header">
-          <p className="notice-news-header-title">News & Articles</p>
-          <div className="notice-news-header-more-btn">{`Read more >`}</div>
+          <p className="notice-news-header-title">{title}</p>
+          <div className="notice-news-header-more-btn" onClick={() => goToReadmore()}>{`Read more >`}</div>
         </div>
         <div className="notice-card-wrapper">
           {data.map((el) => {
@@ -35,8 +39,8 @@ const NoticeNewsCard = (props) => {
           <div className="notice-news-card-info-header-date">{date}</div>
         </div>
         <div className="notice-news-card-info-content">
-          <div className="notice-news-card-info-content-title">{title}</div>
-          {/* <div className="notice-news-card-info-content-description"></div> */}
+          <div className="notice-news-card-info-content-title">{title && title}</div>
+          <div className="notice-news-card-info-content-description">{description && description}</div>
         </div>
       </div>
     </div>

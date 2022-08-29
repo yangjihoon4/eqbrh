@@ -58,6 +58,7 @@
         width: 213px;
         height: 222px;
         border-radius: 16px;
+        cursor: pointer;
 
         &-src {
           width: 100%;
@@ -80,9 +81,20 @@
         }
 
         &-position {
+          margin-bottom: 16px;
           font-size: 12px;
           line-height: 18px;
           color: #a8a8a8;
+        }
+
+        &-linked-in {
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+
+          &-src {
+            width: 100%;
+          }
         }
       }
     }

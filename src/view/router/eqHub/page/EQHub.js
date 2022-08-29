@@ -12,11 +12,12 @@ import businessImage1 from "../../../assets/images/eqHub/business_image1.png";
 import businessImage2 from "../../../assets/images/eqHub/business_image2.png";
 import businessImage3 from "../../../assets/images/eqHub/business_image3.png";
 import dotBackground from "../../../assets/images/eqHub/dotBackground.png";
-import { Link } from "react-router-dom";
-
-import projectImage1 from "../../../assets/images/eqHub/EqHub_project_Image1.png";
-import projectImage2 from "../../../assets/images/eqHub/EqHub_project_Image2.png";
-import projectImage3 from "../../../assets/images/eqHub/EqHub_project_Image3.png";
+import { Link, useNavigate } from "react-router-dom";
+import eqhubVideo1 from "../../../assets/video/eqhub1_video.mp4";
+import projectImageVolare from "../../../assets/images/eqHub/EqHub_project_volare.png";
+import projectImageZvengers from "../../../assets/images/eqHub/EqHub_project_Zvengers.png";
+import projectImageminthing from "../../../assets/images/eqHub/EqHub_project_minthing.png";
+import projectImagexingxing from "../../../assets/images/eqHub/EqHub_project_xingxing.png";
 
 const HUB_INTRODUCE = [
   {
@@ -63,23 +64,30 @@ const BUSINESS_SERVICE_LIST = [
 const EQHUB_PROJECT_LIST = [
   {
     id: 1,
-    image: projectImage1,
-    link: "https://www.hankyung.com/it/article/202204055784g",
+    image: projectImageVolare,
+    link: "https://volare.network",
   },
   {
     id: 2,
-    image: projectImage2,
+    image: projectImageZvengers,
     link: "http://creativemoh.com/index",
   },
   {
     id: 3,
-    image: projectImage3,
+    image: projectImagexingxing,
     link: "https://www.xingxingmobility.com/",
+  },
+  {
+    id: 4,
+    image: projectImageminthing,
+    link: "https://www.hankyung.com/it/article/202204055784g",
   },
 ];
 
 function EqHub(props) {
   const [selectedToolInfo, setSelectedToolInfo] = useState("network");
+
+  const navigate = useNavigate();
 
   return (
     <div id="EqHub">
@@ -96,13 +104,16 @@ function EqHub(props) {
         </div>
         <img className="eqhub-section1-image" src={EQHub_section1_Image} alt="" />
       </div>
-      {/* <div className="eqhub-section2">
-        <div className="eqhub-section2-card-container">
-          {EqHubSection2CardData.map((el, index) => {
-            return <EqHubSection2Card data={el} key={index} />;
-          })}
+      <div className="eqhub-section2">
+        <div className="eqhub-video">
+          <video className="eqhub-video-src" muted autoPlay loop>
+            <source src={eqhubVideo1} type="video/mp4" />
+          </video>
         </div>
-      </div> */}
+        <button className="eqhub-more-button" onClick={() => {}} disabled>
+          Coming Soon
+        </button>
+      </div>
       <div className="eqhub-section3">
         <div className="for-background">
           <img className="background-img" src={dotBackground} alt={"background"} />
@@ -139,7 +150,7 @@ function EqHub(props) {
           })}
         </div>
       </div>
-      <div className="eqhub-section5">
+      {/* <div className="eqhub-section5">
         <div className="eqhub-section5-title">
           <span className="text-40">
             EQ Hub
@@ -148,12 +159,11 @@ function EqHub(props) {
           </span>
         </div>
         <EQHubSection5Tab selectedTool={selectedToolInfo} setSelectedTool={setSelectedToolInfo} />
-      </div>
+      </div> */}
       <div className="eqhub-section6">
         <div className="eqhub-section6-title">
           <span className="text-40">
-            <span className="gradient-text">Projects and Clients</span> <br />
-            of EQ Hub
+            <span className="gradient-text">Projects and Clients</span> of EQ Hub
           </span>
         </div>
         <div className="eqhub-section6-example-container">
